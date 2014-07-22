@@ -71,6 +71,7 @@ class postfix::files {
     replace => false,
     seltype => $postfix::params::seltype,
     source  => $postfix::maincf_source,
+    require => Package['postfix'],
   }
 
   ::postfix::config {
