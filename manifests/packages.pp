@@ -6,7 +6,8 @@ class postfix::packages {
   }
 
   package { 'mailx':
-    ensure => installed,
-    name   => $postfix::params::mailx_package,
+    ensure  => installed,
+    name    => $postfix::params::mailx_package,
+    require => Package["postfix"],
   }
 }
